@@ -33,7 +33,8 @@ const useCountry = (name) => {
 
 				setCountry(response.data[0])
 			} catch (error) {
-				setError(error.response.data.message)
+				const errorMessage = error.response.data.message
+				setError(errorMessage)
 			}
 		}
 
